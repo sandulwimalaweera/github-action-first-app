@@ -3,6 +3,4 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/test', function () {
-    return 'hello github action';
-});
+Route::get('/test',[\App\Http\Controllers\UserController::class, 'getUserDetails']);
